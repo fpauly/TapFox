@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		if velocity.y == 0:
 			anim.play("run")
 	else:
-		velocity.x = move_toward(velocity.x, 0, GameGlobal.playerSpeed)
+		velocity.x = 0#move_toward(velocity.x, 0, GameGlobal.playerSpeed)
 		if velocity.y == 0:
 			anim.play("idle")
 	

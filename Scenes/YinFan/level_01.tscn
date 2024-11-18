@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c2ic7kgwne14f" path="res://Resources/Assets/Environments/SunnyLand/Props/big-house.png" id="9_8npa4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
-size = Vector2(62, 494.5)
+size = Vector2(62, 562)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brq4l"]
 texture = ExtResource("7_cxp8w")
@@ -217,7 +217,7 @@ script = ExtResource("6_a2jpa")
 [node name="Area2D" type="Area2D" parent="Plant-house"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plant-house/Area2D"]
-position = Vector2(20, -196.75)
+position = Vector2(20, -163)
 shape = SubResource("RectangleShape2D_jwqvx")
 
 [node name="tilemap_level_01" type="Node2D" parent="."]
