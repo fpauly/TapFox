@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 @onready var anim=get_node("AnimationPlayer")
-
+@onready var jump_effect = preload("res://Resources/Assets/Sound effects/slimejump-6913.mp3")
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	 
@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		
 		velocity.y = JUMP_VELOCITY
+		AudioPlayer.play_fx(jump_effect)
 		anim.play("jump")
 		 
 		

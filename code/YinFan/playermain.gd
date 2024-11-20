@@ -12,7 +12,7 @@ func _ready() -> void:
 
 
 @onready var anim=get_node("AnimationPlayer")
-
+@onready var start_effect = preload("res://Resources/Assets/Sound effects/game-start-6104.mp3")
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	
@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		AudioPlayer.play_fx(start_effect)
 		get_tree().change_scene_to_file("res://Scenes/YinFan/level_01.tscn")
 		return
 		
