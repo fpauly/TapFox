@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bxtfj2gc6lwp3" path="res://Resources/Assets/Environments/SunnyLand/Props/palm.png" id="5_rjb3l"]
 [ext_resource type="Texture2D" uid="uid://d4hfvbgyno5v" path="res://Resources/Assets/Environments/SunnyLand/Props/plant-house.png" id="5_t2bdv"]
 [ext_resource type="Texture2D" uid="uid://bx8immv1a56p6" path="res://Resources/Assets/Environments/SunnyLand/Props/crate.png" id="6_5e5wn"]
-[ext_resource type="Script" path="res://Scenes/YinFan/plant_house.gd" id="6_a2jpa"]
+[ext_resource type="Script" path="res://code/YinFan/plant_house.gd" id="6_a2jpa"]
 [ext_resource type="Texture2D" uid="uid://d0gguxr6s65fx" path="res://Resources/Assets/Environments/SunnyLand/Props/bush.png" id="7_bs8r8"]
 [ext_resource type="Texture2D" uid="uid://bgywjoygsauw5" path="res://Resources/Assets/Environments/SunnyLand/Layers/tileset.png" id="7_cxp8w"]
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_42ut0"]
