@@ -19,6 +19,7 @@ config/icon="res://FOX four.png"
 [autoload]
 
 GameGlobal="*res://code/YinFan/global.gd"
+AudioPlayer="*res://others/YinFan/audio_player.tscn"
 
 [display]
 
