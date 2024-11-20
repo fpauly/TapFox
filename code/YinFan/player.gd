@@ -3,6 +3,7 @@ extends CharacterBody2D
 #const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anim.play("idle")

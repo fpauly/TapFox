@@ -9,9 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://d0gguxr6s65fx" path="res://Resources/Assets/Environments/SunnyLand/Props/bush.png" id="7_jo760"]
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_ab6c3"]
 [ext_resource type="Texture2D" uid="uid://d4hfvbgyno5v" path="res://Resources/Assets/Environments/SunnyLand/Props/plant-house.png" id="9_br4va"]
-[ext_resource type="Script" path="res://Scenes/YinFan/plant_house.gd" id="10_t7vo2"]
+[ext_resource type="Script" path="res://code/YinFan/plant_house.gd" id="10_t7vo2"]
 [ext_resource type="Texture2D" uid="uid://bgywjoygsauw5" path="res://Resources/Assets/Environments/SunnyLand/Layers/tileset.png" id="11_rvymq"]
 [ext_resource type="PackedScene" uid="uid://dbnbqhxx5qldk" path="res://Sprites/YinFan/player.tscn" id="12_2vct6"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
 size = Vector2(62, 494.5)
