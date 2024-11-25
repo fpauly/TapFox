@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bgywjoygsauw5" path="res://Resources/Assets/Environments/SunnyLand/Layers/tileset.png" id="11_rvymq"]
 [ext_resource type="PackedScene" uid="uid://dbnbqhxx5qldk" path="res://Sprites/YinFan/player.tscn" id="12_2vct6"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
 size = Vector2(62, 494.5)
 
