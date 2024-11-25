@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bmlevkbsuxkh4"]
+[gd_scene load_steps=19 format=4 uid="uid://bmlevkbsuxkh4"]
 
 [ext_resource type="Script" path="res://code/YinFan/level_01.gd" id="1_q047x"]
 [ext_resource type="PackedScene" uid="uid://crb08iwkqlv01" path="res://background/YinFan/background.tscn" id="2_m25is"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bgywjoygsauw5" path="res://Resources/Assets/Environments/SunnyLand/Layers/tileset.png" id="7_cxp8w"]
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_42ut0"]
 [ext_resource type="Texture2D" uid="uid://c2ic7kgwne14f" path="res://Resources/Assets/Environments/SunnyLand/Props/big-house.png" id="9_8npa4"]
+[ext_resource type="PackedScene" uid="uid://b5btn0qq54jxv" path="res://Sprites/YinFan/frog.tscn" id="14_e7cxd"]
+[ext_resource type="PackedScene" uid="uid://bbn2sfaj3lajm" path="res://Sprites/YinFan/items.tscn" id="15_d34aj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
 size = Vector2(62, 562)
@@ -239,6 +241,18 @@ offset_top = 8.0
 offset_right = 1142.0
 offset_bottom = 88.0
 text = "Back"
+
+[node name="frog" parent="." instance=ExtResource("14_e7cxd")]
+position = Vector2(594, 397)
+
+[node name="items" parent="." instance=ExtResource("15_d34aj")]
+position = Vector2(802, 426)
+
+[node name="items2" parent="." instance=ExtResource("15_d34aj")]
+position = Vector2(915, 420)
+
+[node name="items3" parent="." instance=ExtResource("15_d34aj")]
+position = Vector2(780, 287)
 
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
