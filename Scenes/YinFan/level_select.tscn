@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://code/YinFan/level_select.gd" id="1_w1tjh"]
 
-
 [node name="level_select" type="Node2D"]
 script = ExtResource("1_w1tjh")
 
