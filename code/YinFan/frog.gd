@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	elif GameGlobal.enemyCount<=0:
 		youwin()
 	if chase == true:
-		player = get_node("../Player")
+		player = get_node("../../Player")
 		if get_node("AnimatedSprite2D").animation != "Death":
 			get_node("AnimatedSprite2D").play("Jump")
 		var direction = (player.position-self.position).normalized()

@@ -2,23 +2,29 @@ extends CharacterBody2D
 
 #const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
-
+var gameStart = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anim.play("idle")
-
-
-
+	gameStart = false
+	get_node("../CanvasLayer/lable_space").visible=true
 
 @onready var anim=get_node("AnimationPlayer")
 @onready var jump_effect = preload("res://Resources/Assets/Sound effects/slimejump-6913.mp3")
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	 
+	if not gameStart:
+		if Input.is_action_just_pressed("ui_accept"):
+			gameStart = true
+			get_node("../CanvasLayer/lable_space").visible=false
+		else:
+			return
 		 
 	if not is_on_floor():
+		
 		velocity += get_gravity() * delta
 		velocity.x = GameGlobal.playerSpeed
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		
@@ -39,6 +45,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		get_node("AnimatedSprite2D").flip_h = false
 	if direction:
+		if GameGlobal.playerSpeed < GameGlobal.PLAYER_NORMAL_SPEED:
+			GameGlobal.playerSpeed = GameGlobal.playerSpeed+GameGlobal.PLAYER_CHANGE_SPEED
+			 
 		velocity.x = direction * GameGlobal.playerSpeed
 		if velocity.y == 0:
 			anim.play("run")

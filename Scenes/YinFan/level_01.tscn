@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bmlevkbsuxkh4"]
+[gd_scene load_steps=22 format=4 uid="uid://bmlevkbsuxkh4"]
 
 [ext_resource type="Script" path="res://code/YinFan/level_01.gd" id="1_q047x"]
 [ext_resource type="PackedScene" uid="uid://crb08iwkqlv01" path="res://background/YinFan/background.tscn" id="2_m25is"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_42ut0"]
 [ext_resource type="Texture2D" uid="uid://c2ic7kgwne14f" path="res://Resources/Assets/Environments/SunnyLand/Props/big-house.png" id="9_8npa4"]
 [ext_resource type="PackedScene" uid="uid://b5btn0qq54jxv" path="res://Sprites/YinFan/frog.tscn" id="14_e7cxd"]
-[ext_resource type="PackedScene" uid="uid://bbn2sfaj3lajm" path="res://Sprites/YinFan/items.tscn" id="15_d34aj"]
+[ext_resource type="PackedScene" uid="uid://duiqqhcg1p0xb" path="res://Items/YinFan/item_basic.tscn" id="16_jlmta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
 size = Vector2(62, 562)
@@ -172,6 +172,17 @@ texture = ExtResource("7_cxp8w")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_brq4l")
 
+[sub_resource type="LabelSettings" id="LabelSettings_d6pu7"]
+font_size = 20
+font_color = Color(0.329412, 0.458824, 0.654902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ofn8g"]
+font_size = 20
+font_color = Color(0.329412, 0.458824, 0.654902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hl4r"]
+font_size = 28
+
 [node name="level_01" type="Node2D"]
 script = ExtResource("1_q047x")
 
@@ -231,7 +242,7 @@ tile_map_data = PackedByteArray("AAD4/yAAAAADAAEAAAD5/yAAAAADAAEAAAD6/yAAAAADAAE
 tile_set = SubResource("TileSet_w1lxf")
 
 [node name="Player" parent="." instance=ExtResource("2_wnlpm")]
-position = Vector2(327, 450)
+position = Vector2(217, 480)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -242,17 +253,72 @@ offset_right = 1142.0
 offset_bottom = 88.0
 text = "Back"
 
-[node name="frog" parent="." instance=ExtResource("14_e7cxd")]
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 58.0
+offset_bottom = 46.0
+text = "HP"
+label_settings = SubResource("LabelSettings_d6pu7")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 48.0
+offset_right = 66.0
+offset_bottom = 76.0
+text = "Food"
+label_settings = SubResource("LabelSettings_ofn8g")
+
+[node name="lable_space" type="Label" parent="CanvasLayer"]
+offset_left = 488.0
+offset_top = 578.0
+offset_right = 645.0
+offset_bottom = 617.0
+text = "Press space"
+label_settings = SubResource("LabelSettings_1hl4r")
+
+[node name="items" type="Node" parent="."]
+
+[node name="ItemBasic" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(749, 458)
+
+[node name="ItemBasic2" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(823, 463)
+
+[node name="ItemBasic3" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(894, 436)
+
+[node name="ItemBasic4" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(980, 437)
+
+[node name="ItemBasic5" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(747, 294)
+
+[node name="ItemBasic6" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(819, 281)
+
+[node name="ItemBasic7" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(893, 227)
+
+[node name="ItemBasic8" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(979, 228)
+
+[node name="ItemBasic11" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(1435, 246)
+
+[node name="ItemBasic10" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(1204, 338)
+
+[node name="ItemBasic12" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(1303, 433)
+
+[node name="ItemBasic9" parent="items" instance=ExtResource("16_jlmta")]
+position = Vector2(1135, 149)
+
+[node name="enemies" type="Node" parent="."]
+
+[node name="frog" parent="enemies" instance=ExtResource("14_e7cxd")]
 position = Vector2(594, 397)
-
-[node name="items" parent="." instance=ExtResource("15_d34aj")]
-position = Vector2(802, 426)
-
-[node name="items2" parent="." instance=ExtResource("15_d34aj")]
-position = Vector2(915, 420)
-
-[node name="items3" parent="." instance=ExtResource("15_d34aj")]
-position = Vector2(780, 287)
 
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
