@@ -33,69 +33,58 @@ motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(176, 0)
 
 [node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(88, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(440, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(264, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(616, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(968, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(792, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(1144, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle8" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(1496, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle9" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(1320, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle10" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(1672, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle11" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(2024, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="Middle12" type="Sprite2D" parent="ParallaxLayer2"]
-visible = false
 position = Vector2(1848, 560)
 texture = ExtResource("2_r0r6u")
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
-offset_top = 352.0
+visible = false
+offset_top = 341.0
 offset_right = 2112.0
-offset_bottom = 720.0
+offset_bottom = 709.0
 texture = ExtResource("2_r0r6u")
 stretch_mode = 1
 
