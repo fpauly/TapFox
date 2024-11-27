@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c05g3qsvpg17k"]
-
-[ext_resource type="Script" path="res://code/YinFan/bg_music_2d.gd" id="1_n3qeh"]
-
-[node name="bg_music_2d" type="AudioStreamPlayer2D"]
-autoplay = true
-script = ExtResource("1_n3qeh")

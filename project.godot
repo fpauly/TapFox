@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="TapFox"
-run/main_scene="res://Scenes/YinFan/main_scene.tscn"
+run/main_scene="res://YinFan/Scenes/YinFan/main_scene.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/show_image=false
 config/icon="res://FOX four.png"
 
 [autoload]
 
-GameGlobal="*res://code/YinFan/global.gd"
-AudioPlayer="*res://others/YinFan/audio_player.tscn"
+GameGlobal="*res://YinFan/code/YinFan/global.gd"
+AudioPlayer="*res://YinFan/others/YinFan/audio_player.tscn"
 
 [display]
 
