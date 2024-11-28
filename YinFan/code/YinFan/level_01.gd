@@ -5,8 +5,14 @@ extends Node2D
 func _ready() -> void:
 	AudioPlayer.play_music_level()
 
-
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			quit_to_main()
 
 func _on_button_pressed() -> void:
+	quit_to_main()
+
+func quit_to_main()->void:
 	GameGlobal.resetAll()
 	get_tree().change_scene_to_file("res://YinFan/Scenes/YinFan/main_scene.tscn")
