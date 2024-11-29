@@ -628,7 +628,7 @@ offset_left = 488.0
 offset_top = 578.0
 offset_right = 645.0
 offset_bottom = 617.0
-text = "Press space"
+text = "Press Play or Space key"
 label_settings = SubResource("LabelSettings_kolal")
 
 [connection signal="pressed" from="CanvasLayer/button_quit" to="." method="_on_button_quit_pressed"]
