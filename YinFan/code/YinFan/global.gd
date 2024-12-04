@@ -58,6 +58,7 @@ func changeNextScene():
 		nNext = 0
 	sceneID = nNext
 	print(self.dictScenes[nNext][1])
+	GameGlobal.resetAll()
 	get_tree().change_scene_to_file(self.dictScenes[nNext][1])
 	
 	

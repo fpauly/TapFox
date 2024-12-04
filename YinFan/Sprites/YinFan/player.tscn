@@ -206,6 +206,9 @@ tracks/1/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_wb4he"]
+resource_name = "enter"
+
 [sub_resource type="Animation" id="Animation_hdo5u"]
 resource_name = "fall"
 tracks/0/type = "value"
@@ -315,9 +318,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
-
-[sub_resource type="Animation" id="Animation_wb4he"]
-resource_name = "enter"
 
 [sub_resource type="Animation" id="Animation_if6vq"]
 resource_name = "victory"
