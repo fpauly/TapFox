@@ -14,9 +14,9 @@ func play_music_level():
 	 
 	_play_music(level_music)
 	
-func play_fx(stream: AudioStream,volume = 0.0):
+func play_fx(streamA: AudioStream,volume = 0.0):
 	var fx_player = AudioStreamPlayer.new()
-	fx_player.stream = stream
+	fx_player.stream = streamA
 	fx_player.volume_db = volume
 	fx_player.name = "FX_PLAYER"
 	add_child(fx_player)

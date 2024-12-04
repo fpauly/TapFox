@@ -15,4 +15,4 @@ func _on_button_pressed() -> void:
 
 func quit_to_main()->void:
 	GameGlobal.resetAll()
-	get_tree().change_scene_to_file("res://YinFan/Scenes/YinFan/main_scene.tscn")
+	GameGlobal.changeScene(0)

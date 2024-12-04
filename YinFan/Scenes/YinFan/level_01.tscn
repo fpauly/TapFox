@@ -289,6 +289,13 @@ label_settings = SubResource("LabelSettings_1hl4r")
 visible = false
 position = Vector2(87, 66)
 
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 104.0
+offset_bottom = 38.0
+text = "Level 1"
+
 [node name="items" type="Node" parent="."]
 
 [node name="Apple" parent="items" instance=ExtResource("14_2ucs8")]

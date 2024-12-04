@@ -20,6 +20,7 @@ config/icon="res://FOX four.png"
 
 GameGlobal="*res://YinFan/code/YinFan/global.gd"
 AudioPlayer="*res://YinFan/others/YinFan/audio_player.tscn"
+TransitionScene="*res://YinFan/Scenes/YinFan/transition_scene.tscn"
 
 [display]
 
