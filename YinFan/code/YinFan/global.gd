@@ -43,6 +43,17 @@ func  resetAll():
 	bVictory = false
 	sceneID = 0
 	
+func  resetAllButId():
+	playerHP = PLAYER_HP
+	enemyCount = ENEMYAMOUNT
+	playerSpeed = PLAYER_MINIMAL_SPEED
+	foodCount = FOODAMOUNT
+	foodAcorn = FOODAMOUNT
+	foodCherry = FOODAMOUNT
+	treasureGem = TREASUREAMOUNT
+	bEnterHouse = false
+	bVictory = false
+	
 func changeScene(sceneID):
 	AudioPlayer.play_fx(start_effect)
 	TransitionScene.transition()
@@ -58,7 +69,7 @@ func changeNextScene():
 		nNext = 0
 	sceneID = nNext
 	print(self.dictScenes[nNext][1])
-	GameGlobal.resetAll()
+	GameGlobal.resetAllButId()
 	get_tree().change_scene_to_file(self.dictScenes[nNext][1])
 	
 	
