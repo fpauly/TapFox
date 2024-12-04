@@ -399,5 +399,11 @@ position = Vector2(1025, 475)
 [node name="frog" parent="enemies" instance=ExtResource("14_e7cxd")]
 position = Vector2(613, 479)
 
+[node name="Pineapple" parent="." instance=ExtResource("21_5osip")]
+position = Vector2(454, 128)
+
+[node name="Orange" parent="." instance=ExtResource("20_ufs2e")]
+position = Vector2(351, 376)
+
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

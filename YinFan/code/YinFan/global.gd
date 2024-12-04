@@ -26,7 +26,8 @@ var dictScenes = {
 	1:["Level 1","res://YinFan/Scenes/YinFan/level_01.tscn"],
 	2:["Level 2","res://YinFan/Scenes/YinFan/level_02.tscn"],
 	3:["Level 3","res://YinFan/Scenes/YinFan/level_03.tscn"],
-	4:["Level 4","res://YinFan/Scenes/YinFan/level_04.tscn"]
+	4:["Level 4","res://YinFan/Scenes/YinFan/level_04.tscn"],
+	#5:["Level 5","res://YinFan/Scenes/YinFan/level_05.tscn"]
 	}
 	
 var sceneID = 0
@@ -54,11 +55,11 @@ func  resetAllButId():
 	bEnterHouse = false
 	bVictory = false
 	
-func changeScene(sceneID):
+func changeScene(sceneIDA):
 	AudioPlayer.play_fx(start_effect)
 	TransitionScene.transition()
 	await TransitionScene.on_trasition_finished
-	get_tree().change_scene_to_file(self.dictScenes[sceneID][1])
+	get_tree().change_scene_to_file(self.dictScenes[sceneIDA][1])
 
 func changeNextScene():
 	AudioPlayer.play_fx(start_effect)

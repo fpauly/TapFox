@@ -277,6 +277,13 @@ offset_bottom = 76.0
 text = "Food"
 label_settings = SubResource("LabelSettings_ofn8g")
 
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 19.0
+offset_right = 64.0
+offset_bottom = 42.0
+text = "Level 3"
+
 [node name="lable_space" type="Label" parent="CanvasLayer"]
 offset_left = 488.0
 offset_top = 578.0
@@ -391,13 +398,6 @@ position = Vector2(1025, 475)
 
 [node name="frog" parent="enemies" instance=ExtResource("22_ogpjc")]
 position = Vector2(613, 479)
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 10.0
-offset_top = 19.0
-offset_right = 64.0
-offset_bottom = 42.0
-text = "Level 3"
 
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

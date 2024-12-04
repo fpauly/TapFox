@@ -8,6 +8,7 @@ func _play_music(music:AudioStream,volume=0.0):
 	
 	stream = music
 	volume_db = volume
+	music.loop = true
 	play()
 	
 func play_music_level():

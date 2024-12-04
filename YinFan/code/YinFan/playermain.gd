@@ -23,10 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 0
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		AudioPlayer.play_fx(start_effect)
-		TransitionScene.transition()
-		await TransitionScene.on_trasition_finished
-		get_tree().change_scene_to_file("res://YinFan/Scenes/YinFan/level_01.tscn")
+		GameGlobal.changeNextScene()
 		return
 		
 	# Get the input direction and handle the movement/deceleration.

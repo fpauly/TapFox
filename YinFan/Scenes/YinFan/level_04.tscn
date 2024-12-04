@@ -285,6 +285,13 @@ offset_bottom = 617.0
 text = "Press space to start"
 label_settings = SubResource("LabelSettings_1hl4r")
 
+[node name="Label3" type="Label" parent="CanvasLayer"]
+offset_left = 38.0
+offset_top = 16.0
+offset_right = 92.0
+offset_bottom = 39.0
+text = "Level 4"
+
 [node name="Apple" parent="CanvasLayer" instance=ExtResource("14_4qak1")]
 visible = false
 position = Vector2(87, 66)
@@ -391,13 +398,6 @@ position = Vector2(1025, 475)
 
 [node name="frog" parent="enemies" instance=ExtResource("22_h757o")]
 position = Vector2(613, 479)
-
-[node name="Label3" type="Label" parent="."]
-offset_left = 11.0
-offset_top = 13.0
-offset_right = 65.0
-offset_bottom = 36.0
-text = "Level 4"
 
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
