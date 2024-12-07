@@ -21,6 +21,8 @@ var treasureGem = TREASUREAMOUNT
 
 var bEnterHouse = false
 var bVictory = false
+
+var tileMapName = "TileMap"
  
 enum FruitsNameE {
 	Banana,
@@ -122,7 +124,7 @@ func changeNextScene():
 	if nNext >= len(self.dictScenes):
 		nNext = 0
 	sceneID = nNext
-	print(self.dictScenes[nNext][1])
+	#print(self.dictScenes[nNext][1])
 	GameGlobal.resetAllButId()
 	get_tree().change_scene_to_file(self.dictScenes[nNext][1])
 	

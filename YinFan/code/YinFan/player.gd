@@ -26,11 +26,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = GameGlobal.playerSpeed
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		
-		velocity.y = JUMP_VELOCITY
-		AudioPlayer.play_fx(jump_effect)
-		anim.play("jump")
+	if Input.is_action_just_pressed("jump"):# and is_on_floor():
+		if $RayCast2D.is_colliding():
+			var collider = $RayCast2D.get_collider()
+			if collider.name.find(GameGlobal.tileMapName)>=0 or is_on_floor():
+				velocity.y = JUMP_VELOCITY
+				AudioPlayer.play_fx(jump_effect)
+				anim.play("jump")
 		 
 		
 	# Get the input direction and handle the movement/deceleration.
@@ -58,9 +60,23 @@ func _physics_process(delta: float) -> void:
 				anim.play("victory")
 			else:
 				anim.play("idle")
-	
-	if velocity.y >0:
+				
+	if $RayCast2D.is_colliding():
+		var collider = $RayCast2D.get_collider()
+		#print("Object below:", collider)
+		if collider.name.find(GameGlobal.tileMapName)>=0:
+			#print("T Map")
+			pass
+		else:
+			#print("fall 1")
+			anim.play("fall")
+	elif velocity.y >0:
+		#print("fall 2")
 		anim.play("fall")
+		 
+	
+	'''if velocity.y >0:
+		anim.play("fall")'''
  
 
 	move_and_slide()

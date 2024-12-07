@@ -99,7 +99,7 @@ shape = SubResource("RectangleShape2D_ot37r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ugj5c")
-animation = &"Idle"
+animation = &"Jump"
 autoplay = "Idle"
 
 [node name="PlayDetection" type="Area2D" parent="."]
