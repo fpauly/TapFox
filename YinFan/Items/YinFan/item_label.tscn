@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ttkh8i8pmu6"]
+
+[ext_resource type="Script" path="res://YinFan/code/YinFan/item_label.gd" id="1_mdstg"]
+[ext_resource type="PackedScene" uid="uid://8v6wbbkdwwei" path="res://YinFan/Items/YinFan/Apple.tscn" id="2_whaap"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lwujr"]
+font_color = Color(0.793085, 0.545014, 0.264797, 1)
+
+[node name="ItemLabel" type="Node2D"]
+script = ExtResource("1_mdstg")
+
+[node name="itemNode" parent="." instance=ExtResource("2_whaap")]
+script = null
+
+[node name="LabelCount" type="Label" parent="."]
+offset_left = 15.0
+offset_top = -14.0
+offset_right = 55.0
+offset_bottom = 9.0
+text = "1"
+label_settings = SubResource("LabelSettings_lwujr")

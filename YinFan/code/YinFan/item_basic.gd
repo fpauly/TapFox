@@ -6,21 +6,22 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if self.name.find("Banana")>=0:
-			print("Banana")
+			
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Banana]+=1
 		elif self.name.find("Apple")>=0:
-			print("Apple")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Apple]+=1
 		elif self.name.find("Cherry")>=0:
-			print("Cherry")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Cherry]+=1
 		elif self.name.find("Kiwi")>=0:
-			print("Kiwi")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Kiwi]+=1
 		elif self.name.find("Melon")>=0:
-			print("Melon")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Melon]+=1
 		elif self.name.find("Orange")>=0:
-			print("Orange")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Orange]+=1
 		elif self.name.find("Pineapple")>=0:
-			print("Pineapple")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Pineapple]+=1
 		elif self.name.find("Stawberry")>=0:
-			print("Stawberry")
+			GameGlobal.dictFruits[GameGlobal.FruitsNameE.Strawberry]+=1
 		var tween = create_tween()
 		tween.tween_property(self,"position",position+Vector2(0,-30),0.3)
 		tween.tween_property(self,"modulate:a",0.0,0.3)

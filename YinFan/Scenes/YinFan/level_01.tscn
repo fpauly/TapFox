@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_42ut0"]
 [ext_resource type="Texture2D" uid="uid://c2ic7kgwne14f" path="res://Resources/Assets/Environments/SunnyLand/Props/big-house.png" id="9_8npa4"]
 [ext_resource type="PackedScene" uid="uid://8v6wbbkdwwei" path="res://YinFan/Items/YinFan/Apple.tscn" id="14_2ucs8"]
+[ext_resource type="PackedScene" uid="uid://8ttkh8i8pmu6" path="res://YinFan/Items/YinFan/item_label.tscn" id="14_bifkl"]
 [ext_resource type="PackedScene" uid="uid://b5btn0qq54jxv" path="res://YinFan/Sprites/YinFan/frog.tscn" id="14_e7cxd"]
 [ext_resource type="PackedScene" uid="uid://dnmp0wtsd4ava" path="res://YinFan/Items/YinFan/Banana.tscn" id="15_31shl"]
 [ext_resource type="PackedScene" uid="uid://cb1o6ux2mxpck" path="res://YinFan/Items/YinFan/Cherry.tscn" id="16_wny1p"]
@@ -183,10 +184,6 @@ sources/0 = SubResource("TileSetAtlasSource_brq4l")
 font_size = 20
 font_color = Color(0.329412, 0.458824, 0.654902, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_ofn8g"]
-font_size = 20
-font_color = Color(0.329412, 0.458824, 0.654902, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_1hl4r"]
 font_size = 28
 
@@ -253,6 +250,9 @@ position = Vector2(217, 480)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ItemLabel" parent="CanvasLayer" instance=ExtResource("14_bifkl")]
+position = Vector2(26, 35)
+
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 1062.0
 offset_top = 8.0
@@ -269,13 +269,13 @@ offset_bottom = 46.0
 text = "HP"
 label_settings = SubResource("LabelSettings_d6pu7")
 
-[node name="Label2" type="Label" parent="CanvasLayer"]
-offset_left = 18.0
-offset_top = 48.0
-offset_right = 66.0
-offset_bottom = 76.0
-text = "Food"
-label_settings = SubResource("LabelSettings_ofn8g")
+[node name="LabelLevel" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 20.0
+offset_top = 12.0
+offset_right = 104.0
+offset_bottom = 38.0
+text = "Level 1"
 
 [node name="lable_space" type="Label" parent="CanvasLayer"]
 offset_left = 488.0
@@ -285,16 +285,37 @@ offset_bottom = 617.0
 text = "Press space to start"
 label_settings = SubResource("LabelSettings_1hl4r")
 
-[node name="Apple" parent="CanvasLayer" instance=ExtResource("14_2ucs8")]
+[node name="AppleN" parent="CanvasLayer" instance=ExtResource("14_2ucs8")]
 visible = false
-position = Vector2(87, 66)
+position = Vector2(68, 65)
 
-[node name="Label3" type="Label" parent="CanvasLayer"]
-offset_left = 20.0
-offset_top = 12.0
-offset_right = 104.0
-offset_bottom = 38.0
-text = "Level 1"
+[node name="BananaN" parent="CanvasLayer" instance=ExtResource("15_31shl")]
+visible = false
+position = Vector2(274, 66)
+
+[node name="CherryN" parent="CanvasLayer" instance=ExtResource("16_wny1p")]
+visible = false
+position = Vector2(242, 65)
+
+[node name="KiwiN" parent="CanvasLayer" instance=ExtResource("18_d67w8")]
+visible = false
+position = Vector2(30, 63)
+
+[node name="MelonN" parent="CanvasLayer" instance=ExtResource("19_iwdrv")]
+visible = false
+position = Vector2(208, 67)
+
+[node name="OrangeN" parent="CanvasLayer" instance=ExtResource("20_ufs2e")]
+visible = false
+position = Vector2(172, 66)
+
+[node name="PineappleN" parent="CanvasLayer" instance=ExtResource("21_5osip")]
+visible = false
+position = Vector2(134, 63)
+
+[node name="StrawberryN" parent="CanvasLayer" instance=ExtResource("22_ko1a8")]
+visible = false
+position = Vector2(101, 64)
 
 [node name="items" type="Node" parent="."]
 
@@ -398,12 +419,6 @@ position = Vector2(1025, 475)
 
 [node name="frog" parent="enemies" instance=ExtResource("14_e7cxd")]
 position = Vector2(613, 479)
-
-[node name="Pineapple" parent="." instance=ExtResource("21_5osip")]
-position = Vector2(454, 128)
-
-[node name="Orange" parent="." instance=ExtResource("20_ufs2e")]
-position = Vector2(351, 376)
 
 [connection signal="body_entered" from="Plant-house/Area2D" to="Plant-house" method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

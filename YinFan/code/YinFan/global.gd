@@ -19,7 +19,27 @@ var treasureGem = TREASUREAMOUNT
 
 var bEnterHouse = false
 var bVictory = false
-
+ 
+enum FruitsNameE {
+	Banana,
+	Apple,
+	Cherry,
+	Kiwi,
+	Melon,
+	Orange,
+	Pineapple,
+	Strawberry,
+}
+var dictFruits = {
+	FruitsNameE.Banana:0,
+	FruitsNameE.Apple:0,
+	FruitsNameE.Cherry:0,
+	FruitsNameE.Kiwi:0,
+	FruitsNameE.Melon:0,
+	FruitsNameE.Orange:0,
+	FruitsNameE.Pineapple:0,
+	FruitsNameE.Strawberry:0,
+}
 #scene id:["scene name","scene link"]
 var dictScenes = {
 	0:["Main","res://YinFan/Scenes/YinFan/main_scene.tscn"],
@@ -42,6 +62,7 @@ func  resetAll():
 	treasureGem = TREASUREAMOUNT
 	bEnterHouse = false
 	bVictory = false
+	resetFruit()
 	sceneID = 0
 	
 func  resetAllButId():
@@ -54,6 +75,12 @@ func  resetAllButId():
 	treasureGem = TREASUREAMOUNT
 	bEnterHouse = false
 	bVictory = false
+	resetFruit()
+	
+func  resetFruit():
+	for item in FruitsNameE.values():
+	 
+		dictFruits[item]=0
 	
 func changeScene(sceneIDA):
 	AudioPlayer.play_fx(start_effect)
