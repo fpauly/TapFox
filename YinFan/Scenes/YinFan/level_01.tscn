@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bmlevkbsuxkh4"]
+[gd_scene load_steps=30 format=4 uid="uid://bmlevkbsuxkh4"]
 
 [ext_resource type="Script" path="res://YinFan/code/YinFan/level_01.gd" id="1_q047x"]
 [ext_resource type="PackedScene" uid="uid://crb08iwkqlv01" path="res://YinFan/background/YinFan/background.tscn" id="2_m25is"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://4vvkntwhqypu" path="res://Resources/Assets/Environments/SunnyLand/Props/rock-2.png" id="8_42ut0"]
 [ext_resource type="Texture2D" uid="uid://c2ic7kgwne14f" path="res://Resources/Assets/Environments/SunnyLand/Props/big-house.png" id="9_8npa4"]
 [ext_resource type="PackedScene" uid="uid://8v6wbbkdwwei" path="res://YinFan/Items/YinFan/Apple.tscn" id="14_2ucs8"]
+[ext_resource type="Script" path="res://YinFan/code/YinFan/canvas_layer.gd" id="14_aa42y"]
 [ext_resource type="PackedScene" uid="uid://8ttkh8i8pmu6" path="res://YinFan/Items/YinFan/item_label.tscn" id="14_bifkl"]
 [ext_resource type="PackedScene" uid="uid://b5btn0qq54jxv" path="res://YinFan/Sprites/YinFan/frog.tscn" id="14_e7cxd"]
 [ext_resource type="PackedScene" uid="uid://dnmp0wtsd4ava" path="res://YinFan/Items/YinFan/Banana.tscn" id="15_31shl"]
@@ -249,9 +250,13 @@ tile_set = SubResource("TileSet_w1lxf")
 position = Vector2(217, 480)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("14_aa42y")
 
 [node name="ItemLabel" parent="CanvasLayer" instance=ExtResource("14_bifkl")]
+visible = false
 position = Vector2(26, 35)
+
+[node name="FruitCountList" type="Node2D" parent="CanvasLayer"]
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 offset_left = 1062.0
