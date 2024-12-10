@@ -23,6 +23,7 @@ var bEnterHouse = false
 var bVictory = false
 
 var tileMapName = "TileMap"
+var isFire = "Fire"
  
 enum FruitsNameE {
 	Banana,
@@ -114,6 +115,7 @@ func changeScene(sceneIDA):
 	AudioPlayer.play_fx(start_effect)
 	TransitionScene.transition()
 	await TransitionScene.on_trasition_finished
+	sceneID = sceneIDA
 	get_tree().change_scene_to_file(self.dictScenes[sceneIDA][1])
 
 func changeNextScene():
@@ -127,5 +129,14 @@ func changeNextScene():
 	#print(self.dictScenes[nNext][1])
 	GameGlobal.resetAllButId()
 	get_tree().change_scene_to_file(self.dictScenes[nNext][1])
+	
+func reloadScene():
+	AudioPlayer.play_fx(start_effect)
+	TransitionScene.transition()
+	await TransitionScene.on_trasition_finished
+	 
+	#print(self.dictScenes[nNext][1])
+	GameGlobal.resetAllButId()
+	get_tree().change_scene_to_file(self.dictScenes[sceneID][1])
 	
 	

@@ -2,6 +2,7 @@ extends AudioStreamPlayer
 
 const level_music = preload("res://Resources/Assets/Adventure pack 1 ogg/exploration.ogg")
 const level_music2 = preload("res://Resources/Assets/Adventure pack 1 ogg/exploration.ogg")
+const level_musicwin = preload("res://Resources/Assets/Adventure pack 1 ogg/arcade.ogg")
 
 func _play_music(music:AudioStream,volume=0.0):
 	if stream == music:
