@@ -29,6 +29,10 @@ func _physics_process(delta: float) -> void:
 		GameGlobal.sceneID = 1
 		GameGlobal.changeNextScene()
 		return
+	elif Input.is_action_just_pressed("x") and is_on_floor():
+		GameGlobal.sceneID = 2
+		GameGlobal.changeNextScene()
+		return
 		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

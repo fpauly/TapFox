@@ -49,7 +49,7 @@ var dictScenes = {
 	0:["Main","res://YinFan/Scenes/YinFan/main_scene.tscn"],
 	1:["Level 1","res://YinFan/Scenes/YinFan/level_01.tscn"],
 	2:["Level 2","res://YinFan/Scenes/YinFan/level_02.tscn"],
-	#3:["Level 3","res://YinFan/Scenes/YinFan/level_03.tscn"],
+	3:["Level X","res://YinFan/Scenes/YinFan/level_0X.tscn"],
 	#4:["Level 4","res://YinFan/Scenes/YinFan/level_04.tscn"],
 	#5:["Level 5","res://YinFan/Scenes/YinFan/level_05.tscn"]
 	}

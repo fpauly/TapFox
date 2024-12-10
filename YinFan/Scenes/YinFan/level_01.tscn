@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bmlevkbsuxkh4"]
+[gd_scene load_steps=33 format=4 uid="uid://bmlevkbsuxkh4"]
 
 [ext_resource type="Script" path="res://YinFan/code/YinFan/level_01.gd" id="1_q047x"]
 [ext_resource type="PackedScene" uid="uid://crb08iwkqlv01" path="res://YinFan/background/YinFan/background.tscn" id="2_m25is"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://oc6ktjupax7l" path="res://YinFan/Items/YinFan/Orange.tscn" id="20_ufs2e"]
 [ext_resource type="PackedScene" uid="uid://dll763yw73g0h" path="res://YinFan/Items/YinFan/Pineapple.tscn" id="21_5osip"]
 [ext_resource type="PackedScene" uid="uid://s3oih5jkvmxh" path="res://YinFan/Items/YinFan/Strawberry.tscn" id="22_ko1a8"]
+[ext_resource type="Texture2D" uid="uid://vlx6a7vhlgm5" path="res://Resources/Assets/Characters/Players/Fiery Imp/idle/Sprites/idle-1.png" id="24_smvna"]
+[ext_resource type="Texture2D" uid="uid://blil8mq4yfqm7" path="res://Resources/Assets/Characters/Players/Fiery Imp/jump/Sprites/jump-1.png" id="25_3stu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jwqvx"]
 size = Vector2(62, 562)
@@ -188,6 +190,8 @@ font_color = Color(0.329412, 0.458824, 0.654902, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_1hl4r"]
 font_size = 28
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbcsf"]
+
 [node name="level_01" type="Node2D"]
 script = ExtResource("1_q047x")
 
@@ -321,6 +325,14 @@ position = Vector2(134, 63)
 [node name="StrawberryN" parent="CanvasLayer" instance=ExtResource("22_ko1a8")]
 visible = false
 position = Vector2(101, 64)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer"]
+visible = false
+position = Vector2(46, 524)
+texture_normal = ExtResource("24_smvna")
+texture_pressed = ExtResource("25_3stu6")
+shape = SubResource("CircleShape2D_tbcsf")
+action = "jump"
 
 [node name="items" type="Node" parent="."]
 
