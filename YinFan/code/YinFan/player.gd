@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("jump"):
 			gameStart = true
 			get_node("../CanvasLayer/lable_space").visible=false
+			return
 		else:
 			return
 		 

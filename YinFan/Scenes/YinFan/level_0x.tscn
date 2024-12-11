@@ -706,7 +706,7 @@ position = Vector2(5650, 468)
 texture = ExtResource("8_h63mx")
 
 [node name="Bush2" type="Sprite2D" parent="background/ParallaxLayer"]
-position = Vector2(204, 432)
+position = Vector2(204, 430)
 texture = ExtResource("9_n1rwu")
 
 [node name="Plant-house" type="Sprite2D" parent="."]
@@ -732,7 +732,7 @@ tile_set = SubResource("TileSet_w1lxf")
 position = Vector2(6, 486)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tilemap_level_01/TileMapLayer0/StaticBody2DTileMap"]
-position = Vector2(132.25, 7)
+position = Vector2(132, 4)
 shape = SubResource("RectangleShape2D_e4f65")
 
 [node name="StaticBody2DFire" type="StaticBody2D" parent="tilemap_level_01/TileMapLayer0"]
@@ -743,7 +743,7 @@ position = Vector2(2619.63, 6.5)
 shape = SubResource("RectangleShape2D_pc7nl")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(197.159, 449.679)
+position = Vector2(197.159, 447.679)
 script = ExtResource("13_n0cvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -884,7 +884,7 @@ position = Vector2(5066, 336)
 position = Vector2(1647, 289)
 
 [node name="Melon" parent="items" instance=ExtResource("20_u5etv")]
-position = Vector2(362, 418)
+position = Vector2(406, 417)
 
 [node name="Orange" parent="items" instance=ExtResource("21_x5y2y")]
 position = Vector2(1211, 132)
